@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>fer.zavrsni.SCAT</id>
+    <name>Static Code Analysis Tools</name>
+    <vendor email="antonio.spoljar@gmail.com">Kul</vendor>
+
+    <description>Cool plugin for static source code analysis of your project.
+        It detects security issues, bad code practices and similar malevolent code.</description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <extension os="linux"/>
+    </extensions>
+
+    <extensionPoints>
+        <extensionPoint name="toolWindow" beanClass="com.intellij.openapi.wm.ToolWindowEP" dynamic="true">
+            <with attribute="factoryClass" implements="com.intellij.openapi.wm.ToolWindowFactory"/>
+            <with attribute="conditionClass" implements="com.intellij.openapi.util.Condition"/>
+        </extensionPoint>
+    </extensionPoints>
+
+    <actions>
+        <action
+                id="fer.zavrsni.SCAT.toolsMenu"
+                class="fer.zavrsni.src.ToolsAction"
+                text="SCAT Default Analysis"
+                description="Analyses project with default configurations.">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
