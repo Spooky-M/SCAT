@@ -1,4 +1,4 @@
-package fer.zavrsni.src;
+package fer.zavrsni.src.window;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;

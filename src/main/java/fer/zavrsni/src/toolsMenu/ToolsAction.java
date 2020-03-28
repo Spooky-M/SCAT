@@ -1,4 +1,4 @@
-package fer.zavrsni.src;
+package fer.zavrsni.src.toolsMenu;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
