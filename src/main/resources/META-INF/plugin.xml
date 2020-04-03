@@ -3,26 +3,26 @@
     <name>Static Code Analysis Tools</name>
     <vendor email="antonio.spoljar@gmail.com">Kul</vendor>
 
-    <description>Cool plugin for static source code analysis of your project.
+    <description>Plugin for static source code analysis of your project.
         It detects security issues, bad code practices and similar malevolent code.</description>
 
     <change-notes>This is initial release of the plugin SCAT</change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
+    <!-- Postoji i com.intellij.modules.androidstudio, ali se tu ne može koristiti (?) -->
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <extension os="linux"/>
         <extension order="last"/>
-        <toolWindow id="SCAT" anchor="right" factoryClass="fer.zavrsni.src.window.ToolsWindow"/>
+        <toolWindow id="SCAT" secondary="false" anchor="right" factoryClass="fer.zavrsni.src.window.ToolsWindowFactory"/>
     </extensions>
 
     <extensionPoints>
         <extensionPoint name="toolWindow" beanClass="com.intellij.openapi.wm.ToolWindowEP">
 
             <with attribute="factoryClass" implements="com.intellij.openapi.wm.ToolWindowFactory"/>
-            <with attribute="conditionClass" implements="com.intellij.openapi.util.Condition"/>
         </extensionPoint>
     </extensionPoints>
 
