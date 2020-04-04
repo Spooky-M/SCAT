@@ -19,12 +19,12 @@
         <toolWindow id="SCAT" secondary="false" anchor="right" factoryClass="fer.zavrsni.src.window.ToolsWindowFactory"/>
     </extensions>
 
-    <extensionPoints>
-        <extensionPoint name="toolWindow" beanClass="com.intellij.openapi.wm.ToolWindowEP">
+<!--    <extensionPoints>-->
+<!--        <extensionPoint name="toolWindow" beanClass="com.intellij.openapi.wm.ToolWindowEP">-->
 
-            <with attribute="factoryClass" implements="com.intellij.openapi.wm.ToolWindowFactory"/>
-        </extensionPoint>
-    </extensionPoints>
+<!--            <with attribute="factoryClass" implements="com.intellij.openapi.wm.ToolWindowFactory"/>-->
+<!--        </extensionPoint>-->
+<!--    </extensionPoints>-->
 
     <actions>
         <action
