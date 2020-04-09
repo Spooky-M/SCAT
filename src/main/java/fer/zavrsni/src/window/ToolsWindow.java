@@ -2,47 +2,70 @@ package fer.zavrsni.src.window;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
+import fer.zavrsni.src.analysis.ProjectAnalysis;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
 public class ToolsWindow {
     private JPanel toolsWindowContent;
-    private JCheckBox toolsCheckBox;
-    private JLabel name;
+    private JLabel header;
+    private JButton analyseButton;
+    private List<JCheckBox> boxes;
+
     private Map<String, Integer> tools = new HashMap<>();
 
-    private static String toolsNames = "spotbugs_3.1.0_RC7, spotbugs_3.1.12, spotbugs_4.0.0_beta1, " +
-            "spotbugs_4.0.0_beta2, spotbugs_4.0.0_beta3, spotbugs_4.0.0_beta4, pmd, cpd, graudit, checkstyle";
+    private static final int GRID_ROWS = 20;
+    private static final int GRID_COLUMNS = 1;
+    private static final int GRID_H_GAP = 30;
+    private static final int GRID_V_GAP = 10;
 
+    private static final String[] TOOLS_NAMES = {"spotbugs_3.1.0_RC7", "spotbugs_3.1.12", "spotbugs_4.0.0_beta1",
+        "spotbugs_4.0.0_beta2", "spotbugs_4.0.0_beta3", "spotbugs_4.0.0_beta4", "pmd", "cpd", "graudit", "checkstyle"};
+    private static final String SHORT_README = "Select tools and click SCAT button to start analysis.";
 
     public ToolsWindow(@NotNull Project project, @NotNull ToolWindow toolWindow) {
         int i = 0;
-        for(String tool:toolsNames.split(",")) {
+        for(String tool: TOOLS_NAMES) {
             tools.put(tool.trim(), i++);
         }
-        createComponents(toolWindow);
+        createComponents(project, toolWindow);
     }
 
-    private void createComponents(ToolWindow toolWindow) {
+    private void createComponents(Project project, ToolWindow toolWindow) {
+        JComponent component = toolWindow.getComponent();
         toolsWindowContent = new JPanel();
-        name = new JLabel("SCAT");
+        toolsWindowContent.setSize(component.getWidth(), component.getHeight());
 
-        toolsCheckBox = new JCheckBox();
+        header = new JLabel("<HTML><strong>" + SHORT_README + "</strong></HTML>", JLabel.CENTER);
+        header.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        toolsWindowContent.add(header);
+
+        boxes = new ArrayList<>();
         for(String tool : tools.keySet()) {
-            toolsCheckBox.add(new JLabel(tool));
-            toolsCheckBox.setMnemonic(tools.get(tool));
-            toolsCheckBox.setSelected(true);
+            JCheckBox toolCheckBox = new JCheckBox(tool, true);
+            boxes.add(toolCheckBox);
+            toolCheckBox.setMnemonic(tools.get(tool));
+            toolsWindowContent.add(toolCheckBox);
         }
 
-        toolsWindowContent.add(name);
-        toolsWindowContent.add(toolsCheckBox);
-        //BoxLayout neki error
-        toolsWindowContent.setLayout(new BoxLayout(toolsWindowContent, BoxLayout.Y_AXIS));
+        analyseButton = new JButton("Analyse");
+        analyseButton.addActionListener(e -> {
+            analyseButton.setEnabled(false);
+            ProjectAnalysis pa = new ProjectAnalysis(project);
+            analyseButton.setEnabled(true);
+        });
+        toolsWindowContent.add(analyseButton);
+
+        toolsWindowContent.setLayout(new GridLayout(GRID_ROWS, GRID_COLUMNS, GRID_H_GAP, GRID_V_GAP));
         toolsWindowContent.setVisible(true);
+//        component.add(toolsWindowContent);
     }
 
     public JPanel getContent() {
