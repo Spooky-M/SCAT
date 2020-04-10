@@ -7,6 +7,7 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -58,14 +59,26 @@ public class ToolsWindow {
         analyseButton = new JButton("Analyse");
         analyseButton.addActionListener(e -> {
             analyseButton.setEnabled(false);
-            ProjectAnalysis pa = new ProjectAnalysis(project);
+            List<String> selectedBoxes = new ArrayList<>();
+            for(JCheckBox checkbox : boxes) {
+                if(checkbox.isSelected()) {
+                    selectedBoxes.add(checkbox.getName());
+                }
+            }
+            ProjectAnalysis pa = new ProjectAnalysis(project, selectedBoxes);
+            //zovi ProjectAnalysis metode
+            try {
+                pa.executeAnalysis();
+            } catch(IOException ex) {
+                //izbaci notifikaciju o greški
+            }
+
             analyseButton.setEnabled(true);
         });
         toolsWindowContent.add(analyseButton);
 
         toolsWindowContent.setLayout(new GridLayout(GRID_ROWS, GRID_COLUMNS, GRID_H_GAP, GRID_V_GAP));
         toolsWindowContent.setVisible(true);
-//        component.add(toolsWindowContent);
     }
 
     public JPanel getContent() {

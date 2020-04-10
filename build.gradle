@@ -6,8 +6,6 @@ plugins {
 group 'fer.zavrsni'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
-
 repositories {
     mavenCentral()
 }
@@ -15,11 +13,26 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+//
+//// See https://github.com/JetBrains/gradle-intellij-plugin/
+//intellij {
+//    version '2020.04.08'
+//}
 
-// See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2019.3.4'
+    // Define IntelliJ Platform against which to build the plugin project.
+    version '192.7142.36'  // Same IntelliJ IDEA version as target Android Studio
+    type 'IC'              // Use IntelliJ IDEA CE because it's the basis of the IntelliJ Platform
+    // Require the Android plugin, Gradle will match the plugin version to intellij.version
+    plugins 'android'
 }
+
+runIde {
+    // Absolute path to installed target 3.5 Android Studio to use as IDE Development Instance
+    // The "Contents" directory is macOS specific.
+    ideDirectory '/snap/android-studio/current/android-studio'
+}
+
 patchPluginXml {
     changeNotes """
       Add change notes here.<br>

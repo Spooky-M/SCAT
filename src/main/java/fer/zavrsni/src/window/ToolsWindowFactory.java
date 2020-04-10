@@ -7,8 +7,6 @@ import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentFactory;
 import org.jetbrains.annotations.NotNull;
 
-import javax.swing.*;
-
 
 public class ToolsWindowFactory implements ToolWindowFactory {
 
@@ -27,12 +25,6 @@ public class ToolsWindowFactory implements ToolWindowFactory {
 
     @Override
     public boolean shouldBeAvailable(@NotNull Project project) {
-        return true;
-    }
-
-    @Override
-    @Deprecated
-    public boolean isDoNotActivateOnStart() {
         return true;
     }
 
