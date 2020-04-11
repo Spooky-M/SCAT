@@ -66,11 +66,11 @@ public class ToolsWindow {
                 }
             }
             ProjectAnalysis pa = new ProjectAnalysis(project, selectedBoxes);
-            //zovi ProjectAnalysis metode
+            //TODO zovi ProjectAnalysis metode?
             try {
                 pa.executeAnalysis();
             } catch(IOException ex) {
-                //izbaci notifikaciju o greški
+                //TODO izbaci notifikaciju o greški
             }
 
             analyseButton.setEnabled(true);

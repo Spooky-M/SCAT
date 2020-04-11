@@ -20,13 +20,17 @@ public class ProjectAnalysis {
         StringBuilder toolsArg = new StringBuilder();
         tools.forEach(toolsArg::append);
 
-        String[] args = new String[] {"/bin/bash", "-c", "python3", toolsArg.toString(), "args"};
+        String classpath = "";
+        String pack = "";
+        String root = "";
+
+        String arg = "python3 -t " + toolsArg.toString() + " -c " + classpath + " -p " + pack + " " + root;
+        String[] args = new String[] {"/bin/bash", "-c", arg};
         Process proc = new ProcessBuilder(args).start();
-
+        if(proc.exitValue() != 0) {
+            //TODO ispiši grešku
+        }
 
     }
 
-    public Project getProject() {
-        return project;
-    }
 }

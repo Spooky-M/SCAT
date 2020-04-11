@@ -19,7 +19,7 @@ public class ToolsWindowFactory implements ToolWindowFactory {
     }
 
     @Override
-    public void init(ToolWindow window) {
+    public void init(@NotNull ToolWindow window) {
 
     }
 

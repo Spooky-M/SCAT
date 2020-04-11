@@ -6,7 +6,7 @@
     <description>Plugin for static source code analysis of your project.
         It detects security issues, bad code practices and similar malevolent code.</description>
 
-    <change-notes>This is initial release of the plugin SCAT</change-notes>
+    <change-notes>This is the initial release of plugin SCAT</change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
@@ -18,13 +18,6 @@
         <extension order="last"/>
         <toolWindow id="SCAT" secondary="false" anchor="right" factoryClass="fer.zavrsni.src.window.ToolsWindowFactory"/>
     </extensions>
-
-<!--    <extensionPoints>-->
-<!--        <extensionPoint name="toolWindow" beanClass="com.intellij.openapi.wm.ToolWindowEP">-->
-
-<!--            <with attribute="factoryClass" implements="com.intellij.openapi.wm.ToolWindowFactory"/>-->
-<!--        </extensionPoint>-->
-<!--    </extensionPoints>-->
 
     <actions>
         <action

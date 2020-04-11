@@ -13,11 +13,6 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
-//
-//// See https://github.com/JetBrains/gradle-intellij-plugin/
-//intellij {
-//    version '2020.04.08'
-//}
 
 intellij {
     // Define IntelliJ Platform against which to build the plugin project.
@@ -28,8 +23,7 @@ intellij {
 }
 
 runIde {
-    // Absolute path to installed target 3.5 Android Studio to use as IDE Development Instance
-    // The "Contents" directory is macOS specific.
+    // Absolute path to installed target Android Studio to use as IDE Development Instance
     ideDirectory '/snap/android-studio/current/android-studio'
 }
 
