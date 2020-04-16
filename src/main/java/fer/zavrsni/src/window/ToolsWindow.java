@@ -29,7 +29,7 @@ public class ToolsWindow {
 
     private static final String[] TOOLS_NAMES = {"spotbugs_3.1.0_RC7", "spotbugs_3.1.12", "spotbugs_4.0.0_beta1",
         "spotbugs_4.0.0_beta2", "spotbugs_4.0.0_beta3", "spotbugs_4.0.0_beta4", "pmd", "cpd", "graudit", "checkstyle"};
-    private static final String SHORT_README = "Select tools and click SCAT button to start analysis.";
+    private static final String SHORT_README = "Select tools and click \"analyse\" button to start analysis.";
 
     public ToolsWindow(@NotNull Project project, @NotNull ToolWindow toolWindow) {
         int i = 0;
