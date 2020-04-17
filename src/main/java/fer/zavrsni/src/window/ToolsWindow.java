@@ -1,6 +1,7 @@
 package fer.zavrsni.src.window;
 
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.project.ProjectManager;
 import com.intellij.openapi.wm.ToolWindow;
 import fer.zavrsni.src.analysis.ProjectAnalysis;
 import org.jetbrains.annotations.NotNull;
@@ -17,6 +18,7 @@ import java.util.Map;
 public class ToolsWindow {
     private JPanel toolsWindowContent;
     private JLabel header;
+    private JTextField packageChooser;
     private JButton analyseButton;
     private List<JCheckBox> boxes;
 
@@ -29,7 +31,8 @@ public class ToolsWindow {
 
     private static final String[] TOOLS_NAMES = {"spotbugs_3.1.0_RC7", "spotbugs_3.1.12", "spotbugs_4.0.0_beta1",
         "spotbugs_4.0.0_beta2", "spotbugs_4.0.0_beta3", "spotbugs_4.0.0_beta4", "pmd", "cpd", "graudit", "checkstyle"};
-    private static final String SHORT_README = "Select tools and click \"analyse\" button to start analysis.";
+    private static final String SHORT_README = "Select tools, enter which package you want to analyse, " +
+            "and click \"analyse\" button to start.";
 
     public ToolsWindow(@NotNull Project project, @NotNull ToolWindow toolWindow) {
         int i = 0;
@@ -50,11 +53,14 @@ public class ToolsWindow {
 
         boxes = new ArrayList<>();
         for(String tool : tools.keySet()) {
-            JCheckBox toolCheckBox = new JCheckBox(tool, true);
+            JCheckBox toolCheckBox = new JCheckBox(tool, false);
             boxes.add(toolCheckBox);
             toolCheckBox.setMnemonic(tools.get(tool));
             toolsWindowContent.add(toolCheckBox);
         }
+
+        packageChooser = new JTextField("Enter package which you want to analyse (eg. \"com.intellij.openapi\"). Empty field means \"analyse all\".");
+        toolsWindowContent.add(packageChooser);
 
         analyseButton = new JButton("Analyse");
         analyseButton.addActionListener(e -> {
@@ -65,8 +71,12 @@ public class ToolsWindow {
                     selectedBoxes.add(checkbox.getName());
                 }
             }
-            ProjectAnalysis pa = new ProjectAnalysis(project, selectedBoxes);
-            //TODO zovi ProjectAnalysis metode?
+            ProjectAnalysis pa = new ProjectAnalysis(project, selectedBoxes, packageChooser.getText());
+            try {
+                pa.executeAnalysis();
+            } catch (IOException ioException) {
+                //TODO izbaci notifikaciju o greški
+            }
             try {
                 pa.executeAnalysis();
             } catch(IOException ex) {
