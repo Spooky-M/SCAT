@@ -59,7 +59,7 @@ public class ToolsWindow {
             toolsWindowContent.add(toolCheckBox);
         }
 
-        packageChooser = new JTextField("Enter package which you want to analyse (eg. \"com.intellij.openapi\"). Empty field means \"analyse all\".");
+        packageChooser = new JTextField("Enter package which you want to analyse (eg. \"com.intellij.openapi\")");
         toolsWindowContent.add(packageChooser);
 
         analyseButton = new JButton("Analyse");
@@ -68,19 +68,16 @@ public class ToolsWindow {
             List<String> selectedBoxes = new ArrayList<>();
             for(JCheckBox checkbox : boxes) {
                 if(checkbox.isSelected()) {
-                    selectedBoxes.add(checkbox.getName());
+                    selectedBoxes.add(checkbox.getText());
                 }
             }
-            ProjectAnalysis pa = new ProjectAnalysis(project, selectedBoxes, packageChooser.getText());
+
+            ProjectAnalysis pa;
             try {
+                pa = new ProjectAnalysis(project, selectedBoxes, packageChooser.getText(), packageChooser);
                 pa.executeAnalysis();
             } catch (IOException ioException) {
-                //TODO izbaci notifikaciju o greški
-            }
-            try {
-                pa.executeAnalysis();
-            } catch(IOException ex) {
-                //TODO izbaci notifikaciju o greški
+                ioException.getCause();
             }
 
             analyseButton.setEnabled(true);

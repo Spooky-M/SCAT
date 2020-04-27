@@ -1,0 +1,365 @@
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICreds2Activity.java:35:	Avoid unused imports such as 'android.os.Environment'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICreds2Activity.java:44:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICreds2Activity.java:47:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICreds2Activity.java:47:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICreds2Activity.java:50:	Local variable 'apicview' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICreds2Activity.java:51:	Local variable 'pintext' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICreds2Activity.java:52:	Local variable 'vbutton' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICreds2Activity.java:53:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICreds2Activity.java:53:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICreds2Activity.java:54:	Local variable 'bcheck' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICreds2Activity.java:54:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICreds2Activity.java:56:	Avoid unnecessary comparisons in boolean expressions
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICreds2Activity.java:59:	Local variable 'apidetails' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICreds2Activity.java:70:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICreds2Activity.java:75:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICredsActivity.java:38:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICredsActivity.java:41:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICredsActivity.java:41:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICredsActivity.java:44:	Local variable 'apicview' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICredsActivity.java:47:	Local variable 'apidetails' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/APICredsActivity.java:50:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl1Activity.java:41:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl1Activity.java:44:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl1Activity.java:44:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl1Activity.java:49:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl1Activity.java:51:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl1Activity.java:51:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl1Activity.java:54:	Avoid if (x != y) ..; else ..;
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl1Activity.java:58:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl2Activity.java:42:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl2Activity.java:45:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl2Activity.java:45:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl2Activity.java:50:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl2Activity.java:52:	Local variable 'rbregnow' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl2Activity.java:53:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl2Activity.java:53:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl2Activity.java:54:	Local variable 'chk_pin' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl2Activity.java:54:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl2Activity.java:54:	The local variable name 'chk_pin' doesn't match '[a-z][a-zA-Z0-9]*'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl2Activity.java:60:	Avoid if (x != y) ..; else ..;
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl2Activity.java:64:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:44:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:48:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:48:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:52:	Local variable 'spref' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:53:	Local variable 'pin' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:53:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:55:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:56:	Local variable 'vbutton' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:57:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:61:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:62:	Local variable 'spref' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:63:	Local variable 'spedit' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:63:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:64:	Local variable 'pinTxt' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:65:	Local variable 'pin' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:65:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:65:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:67:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:68:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:71:	Local variable 'vbutton' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:74:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:75:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:78:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:82:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:83:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3Activity.java:83:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:34:	Avoid unused imports such as 'android.content.ContentResolver'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:45:	Avoid unused imports such as 'android.widget.TextView'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:48:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:51:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:51:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:56:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:57:	Local variable 'pinTxt' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:58:	Local variable 'abutton' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:59:	Local variable 'spref' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:60:	Local variable 'pin' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:60:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:61:	Local variable 'userpin' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:61:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:61:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:64:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:66:	Local variable 'lview' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:67:	Avoid variables with short names like cr
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:67:	Local variable 'cr' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:68:	Local variable 'columns' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:69:	Local variable 'fields' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:70:	Local variable 'adapter' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:71:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/AccessControl3NotesActivity.java:78:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/DivaJni.java:37:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/DivaJni.java:39:	The constant name 'soName' doesn't match '[A-Z][A-Z_0-9]*'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/DivaJni.java:43:	The use of native code is not recommended.
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/Hardcode2Activity.java:40:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/Hardcode2Activity.java:45:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/Hardcode2Activity.java:45:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/Hardcode2Activity.java:52:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/Hardcode2Activity.java:53:	Local variable 'hckey' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/Hardcode2Activity.java:55:	Avoid if (x != y) ..; else ..;
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/Hardcode2Activity.java:55:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/Hardcode2Activity.java:55:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/Hardcode2Activity.java:55:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/Hardcode2Activity.java:56:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/Hardcode2Activity.java:59:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/HardcodeActivity.java:40:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/HardcodeActivity.java:42:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/HardcodeActivity.java:42:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/HardcodeActivity.java:47:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/HardcodeActivity.java:48:	Local variable 'hckey' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/HardcodeActivity.java:50:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/HardcodeActivity.java:50:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/HardcodeActivity.java:50:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/HardcodeActivity.java:51:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/HardcodeActivity.java:54:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation2URISchemeActivity.java:41:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation2URISchemeActivity.java:44:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation2URISchemeActivity.java:44:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation2URISchemeActivity.java:48:	Local variable 'wview' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation2URISchemeActivity.java:49:	Local variable 'wset' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation2URISchemeActivity.java:49:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation2URISchemeActivity.java:50:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation2URISchemeActivity.java:54:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation2URISchemeActivity.java:55:	Local variable 'uriText' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation2URISchemeActivity.java:56:	Local variable 'wview' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation2URISchemeActivity.java:58:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation2URISchemeActivity.java:58:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation2URISchemeActivity.java:58:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation2URISchemeActivity.java:58:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation3Activity.java:40:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation3Activity.java:45:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation3Activity.java:45:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation3Activity.java:52:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation3Activity.java:53:	Local variable 'cTxt' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation3Activity.java:55:	Avoid if (x != y) ..; else ..;
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation3Activity.java:55:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation3Activity.java:55:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation3Activity.java:55:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation3Activity.java:56:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InputValidation3Activity.java:59:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:42:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:45:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:45:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:50:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:51:	Local variable 'spref' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:52:	Local variable 'spedit' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:52:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:53:	Local variable 'usr' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:54:	Local variable 'pwd' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:56:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:56:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:56:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:56:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:57:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:57:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:57:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:57:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:58:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage1Activity.java:60:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:34:	Avoid unused imports such as 'android.content.Context'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:36:	Avoid unused imports such as 'android.os.Environment'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:44:	Avoid unused imports such as 'java.io.File'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:46:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:50:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:50:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:56:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:63:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:64:	Local variable 'usr' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:65:	Local variable 'pwd' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:67:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:67:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:67:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:67:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:70:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage2Activity.java:73:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:34:	Avoid unused imports such as 'android.os.Environment'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:43:	Avoid unused imports such as 'java.io.FileOutputStream'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:46:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:49:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:49:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:54:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:55:	Local variable 'usr' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:56:	Local variable 'pwd' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:58:	Local variable 'ddir' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:58:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:61:	Local variable 'uinfo' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:62:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:63:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:64:	Avoid instantiating FileInputStream, FileOutputStream, FileReader, or FileWriter
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:64:	Avoid variables with short names like fw
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:64:	Local variable 'fw' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:65:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:65:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:65:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:65:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:67:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:70:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage3Activity.java:71:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:45:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:48:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:48:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:53:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:54:	Local variable 'usr' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:55:	Local variable 'pwd' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:57:	Local variable 'sdir' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:60:	Local variable 'uinfo' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:63:	Avoid instantiating FileInputStream, FileOutputStream, FileReader, or FileWriter
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:63:	Avoid variables with short names like fw
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:63:	Local variable 'fw' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:64:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:64:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:64:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:64:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:66:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:69:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/InsecureDataStorage4Activity.java:70:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/LogActivity.java:41:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/LogActivity.java:44:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/LogActivity.java:44:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/LogActivity.java:49:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/LogActivity.java:50:	Local variable 'cctxt' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/LogActivity.java:54:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/LogActivity.java:54:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/LogActivity.java:55:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/LogActivity.java:56:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/LogActivity.java:56:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/LogActivity.java:57:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/LogActivity.java:61:	Avoid unused method parameters such as 'ccstr'.
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/LogActivity.java:61:	Parameter 'ccstr' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/LogActivity.java:63:	Avoid variables with short names like e
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/LogActivity.java:63:	Local variable 'e' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:36:	Avoid unused imports such as 'android.support.design.widget.FloatingActionButton'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:37:	Avoid unused imports such as 'android.support.design.widget.Snackbar'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:44:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:47:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:47:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:50:	Local variable 'toolbar' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:56:	Parameter 'menu' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:58:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:63:	Parameter 'item' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:67:	Avoid variables with short names like id
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:67:	Local variable 'id' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:71:	A method should have only one exit point, and that should be the last statement in the method
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:77:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:77:	The method 'startChallenge(View)' has a cyclomatic complexity of 14.
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:80:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:80:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:84:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:84:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:88:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:88:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:92:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:92:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:96:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:96:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:100:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:100:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:104:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:104:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:108:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:108:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:112:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:112:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:116:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:116:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:120:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:120:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:124:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:124:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:128:	Avoid variables with short names like i
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/MainActivity.java:128:	Local variable 'i' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:53:	To avoid mistakes add a comment at the beginning of the mDB field if you want a default access modifier
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:53:	Use explicit scoping instead of the default package private level
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:54:	To avoid mistakes add a comment at the beginning of the DBNAME field if you want a default access modifier
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:54:	Use explicit scoping instead of the default package private level
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:55:	To avoid mistakes add a comment at the beginning of the DBVERSION field if you want a default access modifier
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:55:	Use explicit scoping instead of the default package private level
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:56:	To avoid mistakes add a comment at the beginning of the TABLE field if you want a default access modifier
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:56:	Use explicit scoping instead of the default package private level
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:57:	To avoid mistakes add a comment at the beginning of the C_ID field if you want a default access modifier
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:57:	Use explicit scoping instead of the default package private level
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:58:	To avoid mistakes add a comment at the beginning of the C_TITLE field if you want a default access modifier
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:58:	Use explicit scoping instead of the default package private level
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:59:	To avoid mistakes add a comment at the beginning of the C_NOTE field if you want a default access modifier
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:59:	Use explicit scoping instead of the default package private level
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:61:	To avoid mistakes add a comment at the beginning of the CREATE_TBL_QRY field if you want a default access modifier
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:61:	Use explicit scoping instead of the default package private level
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:66:	To avoid mistakes add a comment at the beginning of the DROP_TBL_QRY field if you want a default access modifier
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:66:	Use explicit scoping instead of the default package private level
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:68:	To avoid mistakes add a comment at the beginning of the PATH_TABLE field if you want a default access modifier
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:68:	Use explicit scoping instead of the default package private level
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:69:	To avoid mistakes add a comment at the beginning of the PATH_ID field if you want a default access modifier
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:69:	Use explicit scoping instead of the default package private level
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:71:	To avoid mistakes add a comment at the beginning of the AUTHORITY field if you want a default access modifier
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:71:	Use explicit scoping instead of the default package private level
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:72:	To avoid mistakes add a comment at the beginning of the CONTENT_URI field if you want a default access modifier
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:72:	Use explicit scoping instead of the default package private level
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:74:	The constant name 'urimatcher' doesn't match '[A-Z][A-Z_0-9]*'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:74:	To avoid mistakes add a comment at the beginning of the urimatcher field if you want a default access modifier
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:74:	Use explicit scoping instead of the default package private level
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:82:	Parameter 'context' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:87:	Avoid variables with short names like db
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:87:	Parameter 'db' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:99:	Avoid variables with short names like db
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:99:	Parameter 'db' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:99:	Parameter 'newVersion' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:99:	Parameter 'oldVersion' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:104:	Avoid unnecessary constructors - the compiler will generate these for you
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:104:	It is a good practice to call super() in a constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:108:	Parameter 'selection' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:108:	Parameter 'selectionArgs' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:108:	Parameter 'uri' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:117:	Avoid variables with short names like id
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:117:	Local variable 'id' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:119:	Avoid if (x != y) ..; else ..;
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:125:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:125:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:130:	Parameter 'uri' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:134:	A method should have only one exit point, and that should be the last statement in the method
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:144:	Parameter 'uri' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:144:	Parameter 'values' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:145:	Local variable 'row' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:148:	Local variable 'newUri' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:149:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:149:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:157:	Local variable 'dbHelper' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:159:	Avoid unnecessary if..then..else statements when returning booleans
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:160:	A method should have only one exit point, and that should be the last statement in the method
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:168:	Parameter 'projection' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:168:	Parameter 'selection' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:168:	Parameter 'uri' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:169:	Avoid reassigning parameters such as 'sortOrder'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:169:	Parameter 'selectionArgs' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:171:	Local variable 'queryBuilder' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:189:	Local variable 'cursor' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:193:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:193:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:193:	Potential violation of Law of Demeter (object not created locally)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:198:	Parameter 'selection' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:198:	Parameter 'uri' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:198:	Parameter 'values' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:199:	Parameter 'selectionArgs' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:209:	Avoid if (x != y) ..; else ..;
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:215:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/NotesProvider.java:215:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:43:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:48:	Avoid excessively long variable names like savedInstanceState
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:48:	Parameter 'savedInstanceState' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:60:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:66:	Parameter 'view' is not assigned and could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:67:	Local variable 'srchtxt' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:68:	Avoid variables with short names like cr
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:70:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:70:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:71:	Local variable 'strb' could be declared final
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:71:	StringBuffer constructor is initialized with size 16, but has at least 18 characters appended.
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:72:	Useless parentheses.
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:72:	Useless parentheses.
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:80:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:82:	Potential violation of Law of Demeter (method chain calls)
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/main/java/jakhar/aseem/diva/SQLInjectionActivity.java:84:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/test/java/jakhar/aseem/diva/ExampleUnitTest.java:5:	Avoid unused imports such as 'org.junit.Assert'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/test/java/jakhar/aseem/diva/ExampleUnitTest.java:10:	Each class should declare at least one constructor
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/test/java/jakhar/aseem/diva/ExampleUnitTest.java:12:	A method/constructor should not explicitly throw java.lang.Exception
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/test/java/jakhar/aseem/diva/ExampleUnitTest.java:12:	The JUnit 4 test method name 'addition_isCorrect' doesn't match '[a-z][a-zA-Z0-9]*'
+/home/antonio/Documents/Materijali/Projekt/diva-android/app/src/test/java/jakhar/aseem/diva/ExampleUnitTest.java:13:	JUnit assertions should include a message

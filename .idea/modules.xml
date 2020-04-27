@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SCAT.iml" filepath="$PROJECT_DIR$/.idea/modules/SCAT.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SCAT.main.iml" filepath="$PROJECT_DIR$/.idea/modules/SCAT.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SCAT.test.iml" filepath="$PROJECT_DIR$/.idea/modules/SCAT.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/main/resources/Skripta/Skripta.iml" filepath="$PROJECT_DIR$/src/main/resources/Skripta/Skripta.iml" />
     </modules>
   </component>
 </project>
