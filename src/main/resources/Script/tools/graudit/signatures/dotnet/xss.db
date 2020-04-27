@@ -1,8 +1,0 @@
-# Dotnet XSS
-response.write
-<%\s*=
-HttpUtility
-HtmlEncode
-UrlEncode
-innerText
-innerHTML

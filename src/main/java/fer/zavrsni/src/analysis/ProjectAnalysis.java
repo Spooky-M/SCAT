@@ -1,18 +1,25 @@
 package fer.zavrsni.src.analysis;
 
+import com.google.common.collect.Lists;
+import com.intellij.execution.ExecutionException;
+import com.intellij.execution.configurations.GeneralCommandLine;
+import com.intellij.execution.process.OSProcessHandler;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.projectRoots.Sdk;
 import com.intellij.openapi.roots.ProjectRootManager;
 import com.intellij.openapi.vfs.LocalFileSystem;
+import com.intellij.openapi.vfs.VirtualFile;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -29,10 +36,12 @@ public class ProjectAnalysis {
     private static Path scriptPath;
     private static Path reportPath;
     private static Path reportSrcPath;
-    private static Path scatFolderPath;
+
+    private VirtualFile scriptFolder;
 
 
-    public ProjectAnalysis(@NotNull Project project, List<String> tools, String packageName, JTextField packageChooser) throws IOException {
+    public ProjectAnalysis(@NotNull Project project, List<String> tools, String packageName,
+                           JTextField packageChooser) throws IOException {
         this.project = project;
         this.tools = tools;
         this.packageName = packageName;
@@ -46,33 +55,37 @@ public class ProjectAnalysis {
             projectRootPath += "/";
         }
 
-        scatFolderPath = Paths.get(projectRootPath + "SCAT/");
-        if(!Files.exists(scatFolderPath)){
-            Files.createDirectory(scatFolderPath);
+        File scriptFolderPath = Paths.get(projectRootPath + "/PPProjekt").toFile();
+
+        scriptFolder = LocalFileSystem.getInstance().findFileByIoFile(scriptFolderPath);
+        if(Objects.isNull(scriptFolder) || !scriptFolder.exists()) {
+            packageChooser.setText("Nije uspjelo!");
         }
 
-        reportPath = Paths.get(projectRootPath + "report.html");
-        if (!Files.exists(reportPath)) {
-            Files.createFile(reportPath);
-        }
-
-        auxClasspathFromFile = Paths.get(projectRootPath + "/auxClasspathFromFile");
+        auxClasspathFromFile = Paths.get(scriptFolder.getPath() + "/auxClasspathFromFile");
         if (!Files.exists(auxClasspathFromFile)) {
             Files.createFile(auxClasspathFromFile);
         }
 
-//        Files.copy(getClass().getResourceAsStream(""), scatFolderPath);
-        scriptPath = Paths.get(getClass().getResource("/Script/script.py").getFile());
+        scriptPath = Paths.get(scriptFolderPath + "/script.py");
         if (!Files.exists(scriptPath)) {
             packageChooser.setText(scriptPath.toString());
         } else {
             packageChooser.setText("Success!");
+        }
+
+        VirtualFile f = LocalFileSystem.getInstance().findFileByPath(scriptPath.toString());
+        if(Objects.isNull(f) || !f.exists()) {
+            JOptionPane.showMessageDialog(null,
+                    "Something went wrong while running script: ",
+                    "Error", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
     public void executeAnalysis() throws IOException {
         StringBuilder toolsArg = new StringBuilder();
         tools.forEach(t -> toolsArg.append(t).append(","));
+        toolsArg.replace(toolsArg.length()-1, toolsArg.length(), "");
 
         ProjectRootManager projectManager = ProjectRootManager.getInstance(project);
         projectManager.getContentRootsFromAllModules();
@@ -81,56 +94,29 @@ public class ProjectAnalysis {
          //TODO ispiši grešku
         }
 
-//        InterpreterExample ie = new InterpreterExample();
-//        ie.execfile("Script/script.py");
-//        PyInstance hello = ie.createClass("Hello", "None");
-//        hello.invoke("run");
+        String classpath = projectRootPath + "gradle";
+        writeToClasspathFile(classpath);
 
         try {
-            String arg = "cd " + projectRootPath + " && touch proba";
-//            Runtime.getRuntime().exec("/bin/bash -c " + arg);
-            String[] args = new String[] {"/bin/bash", "-c", arg};
-            Process proc = new ProcessBuilder(args).start();
-            proc.wait();
-            if(proc.exitValue() != 0) {
-                JOptionPane.showMessageDialog(null,
-                        "Something went wrong while running script: " + proc.getOutputStream(),
-                        "Error", JOptionPane.INFORMATION_MESSAGE);
-            }
-        } catch(IOException | InterruptedException e) {
-            JOptionPane.showMessageDialog(null,
-                    "Something went wrong while running script: " + e.getMessage(),
-                    "Error", JOptionPane.INFORMATION_MESSAGE);
-        }
+            List<String> cmds = new ArrayList<>();
+            cmds.add("python3");
+            cmds.add(scriptPath.toAbsolutePath().toString());
+            cmds.add("-t " + toolsArg.toString());
+            cmds.add("-c " + auxClasspathFromFile.toString());
+            cmds.add("-p " + packageName);
+            cmds.add(projectRootPath);
 
-//        String classpath = projectRootPath + "gradle";
-//        writeToClasspathFile(classpath);
-//
-//        String arg = "python3 " + scriptPath + " -t " + toolsArg.toString()
-//                + " -c " + auxClasspathFromFile + " -p " + packageName + " " + projectRootPath;
-//        String[] args = new String[] {"/bin/bash", "-c", arg};
-//        Process proc;
-//        try {
-//            proc = new ProcessBuilder(args).start();
-//            if(proc.exitValue() != 0) {
-//                JOptionPane.showMessageDialog(null,
-//                        "Something went wrong while running script: " + proc.getOutputStream(),
-//                        "Error", JOptionPane.INFORMATION_MESSAGE);
-//            }
-//        } catch(IOException e) {
-//            JOptionPane.showMessageDialog(null,
-//                    "Something went wrong while running script: " + e.getMessage(),
-//                    "Error", JOptionPane.INFORMATION_MESSAGE);
-//        }
-//
-//        reportSrcPath = Paths.get(getClass().getResource("/Script/report.html").toString());
-//        try {
-//            Files.copy(reportSrcPath, reportPath, StandardCopyOption.REPLACE_EXISTING);
-//        } catch(IOException e) {
-//            JOptionPane.showMessageDialog(null,
-//                    "Something went wrong when copying files: " + e.getMessage(),
-//                    "Error", JOptionPane.INFORMATION_MESSAGE);
-//        }
+            GeneralCommandLine generalCommandLine = new GeneralCommandLine(cmds);
+            generalCommandLine.setCharset(StandardCharsets.UTF_8);
+            generalCommandLine.setWorkDirectory(scriptFolder.getPath());
+
+            OSProcessHandler processHandler = new OSProcessHandler(generalCommandLine);
+            processHandler.startNotify();
+//            String commandLineOutputStr = ScriptRunnerUtil.getProcessOutput(generalCommandLine);
+//            packageChooser.setText(commandLineOutputStr);
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 
     private void writeToClasspathFile(String classpath) throws IOException {

@@ -352,5 +352,6 @@
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.j2objc:j2objc-annotations:1.3" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.17" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.ant:ant-launcher:1.9.7" level="project" />
+    <orderEntry type="library" name="Python 3.6 interpreter library" level="application" />
   </component>
 </module>

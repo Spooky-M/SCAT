@@ -5,10 +5,12 @@ import com.intellij.openapi.project.ProjectManager;
 import com.intellij.openapi.wm.ToolWindow;
 import fer.zavrsni.src.analysis.ProjectAnalysis;
 import org.jetbrains.annotations.NotNull;
+import java.nio.file.Path;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,6 +21,7 @@ public class ToolsWindow {
     private JPanel toolsWindowContent;
     private JLabel header;
     private JTextField packageChooser;
+    private JTextField scriptField;
     private JButton analyseButton;
     private List<JCheckBox> boxes;
 
@@ -59,7 +62,8 @@ public class ToolsWindow {
             toolsWindowContent.add(toolCheckBox);
         }
 
-        packageChooser = new JTextField("Enter package which you want to analyse (eg. \"com.intellij.openapi\")");
+        packageChooser = new JTextField("jakhar.aseem.diva");
+//        packageChooser = new JTextField("Enter package which you want to analyse (eg. \"com.intellij.openapi\")");
         toolsWindowContent.add(packageChooser);
 
         analyseButton = new JButton("Analyse");
@@ -74,7 +78,8 @@ public class ToolsWindow {
 
             ProjectAnalysis pa;
             try {
-                pa = new ProjectAnalysis(project, selectedBoxes, packageChooser.getText(), packageChooser);
+                pa = new ProjectAnalysis(project, selectedBoxes, packageChooser.getText(),
+                        packageChooser);
                 pa.executeAnalysis();
             } catch (IOException ioException) {
                 ioException.getCause();

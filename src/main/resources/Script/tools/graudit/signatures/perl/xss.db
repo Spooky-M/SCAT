@@ -1,2 +1,0 @@
-# Perl xss signatures
-print\s*.*\$.*->param\(?.*\)?
