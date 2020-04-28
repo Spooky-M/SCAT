@@ -81,8 +81,10 @@ public class ToolsWindow {
                 pa = new ProjectAnalysis(project, selectedBoxes, packageChooser.getText(),
                         packageChooser);
                 pa.executeAnalysis();
-            } catch (IOException ioException) {
-                ioException.getCause();
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null,
+                        "Something went wrong while running script: " + ex.getCause(),
+                        "Error", JOptionPane.INFORMATION_MESSAGE);
             }
 
             analyseButton.setEnabled(true);

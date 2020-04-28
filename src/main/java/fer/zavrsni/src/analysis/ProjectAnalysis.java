@@ -1,19 +1,21 @@
 package fer.zavrsni.src.analysis;
 
-import com.google.common.collect.Lists;
 import com.intellij.execution.ExecutionException;
 import com.intellij.execution.configurations.GeneralCommandLine;
 import com.intellij.execution.process.OSProcessHandler;
+import com.intellij.openapi.progress.ProgressIndicator;
+import com.intellij.openapi.progress.ProgressManager;
+import com.intellij.openapi.progress.Task;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.projectRoots.Sdk;
 import com.intellij.openapi.roots.ProjectRootManager;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
+import org.jetbrains.android.dom.manifest.Application;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -28,16 +30,15 @@ public class ProjectAnalysis {
     private Project project;
     private List<String> tools;
     private String packageName;
-    private String projectRootPath;
-
     private JTextField packageChooser;
 
-    private static Path auxClasspathFromFile;
-    private static Path scriptPath;
-    private static Path reportPath;
-    private static Path reportSrcPath;
+    private Path projectRootPath;
+    private Path auxClasspathFromFile;
+    private Path reportPath;
+    private Path reportSrcPath;
 
     private VirtualFile scriptFolder;
+    private Path scriptPath;
 
 
     public ProjectAnalysis(@NotNull Project project, List<String> tools, String packageName,
@@ -45,21 +46,37 @@ public class ProjectAnalysis {
         this.project = project;
         this.tools = tools;
         this.packageName = packageName;
-        this.projectRootPath = project.getBasePath();
         this.packageChooser = packageChooser;
 
-        if(Objects.isNull(projectRootPath)) {
-            //TODO ispiši grešku
+        String path = project.getBasePath();
+        if(Objects.isNull(path)) {
+            JOptionPane.showMessageDialog(null,
+                    "Something went wrong while running script: ",
+                    "Error", JOptionPane.INFORMATION_MESSAGE);
+            return;
         }
-        if(!projectRootPath.endsWith("/")) {
-            projectRootPath += "/";
+        this.projectRootPath = Paths.get(path);
+        if(!Files.exists(projectRootPath)) {
+            JOptionPane.showMessageDialog(null,
+                    "Something went wrong while running script: ",
+                    "Error", JOptionPane.INFORMATION_MESSAGE);
+            return;
         }
 
-        File scriptFolderPath = Paths.get(projectRootPath + "/PPProjekt").toFile();
-
-        scriptFolder = LocalFileSystem.getInstance().findFileByIoFile(scriptFolderPath);
+        this.scriptFolder = LocalFileSystem.getInstance().findFileByPath(
+                projectRootPath.toString() + "/PPProjekt/");
         if(Objects.isNull(scriptFolder) || !scriptFolder.exists()) {
-            packageChooser.setText("Nije uspjelo!");
+            JOptionPane.showMessageDialog(null,
+                    "Something went wrong while running script: ",
+                    "Error", JOptionPane.INFORMATION_MESSAGE);
+            return;
+        }
+        this.scriptPath = Paths.get(scriptFolder.getPath() + "/script.py");
+        if(!Files.exists(scriptPath)) {
+            JOptionPane.showMessageDialog(null,
+                    "Something went wrong while running script: ",
+                    "Error", JOptionPane.INFORMATION_MESSAGE);
+            return;
         }
 
         auxClasspathFromFile = Paths.get(scriptFolder.getPath() + "/auxClasspathFromFile");
@@ -67,19 +84,6 @@ public class ProjectAnalysis {
             Files.createFile(auxClasspathFromFile);
         }
 
-        scriptPath = Paths.get(scriptFolderPath + "/script.py");
-        if (!Files.exists(scriptPath)) {
-            packageChooser.setText(scriptPath.toString());
-        } else {
-            packageChooser.setText("Success!");
-        }
-
-        VirtualFile f = LocalFileSystem.getInstance().findFileByPath(scriptPath.toString());
-        if(Objects.isNull(f) || !f.exists()) {
-            JOptionPane.showMessageDialog(null,
-                    "Something went wrong while running script: ",
-                    "Error", JOptionPane.INFORMATION_MESSAGE);
-        }
     }
 
     public void executeAnalysis() throws IOException {
@@ -88,40 +92,57 @@ public class ProjectAnalysis {
         toolsArg.replace(toolsArg.length()-1, toolsArg.length(), "");
 
         ProjectRootManager projectManager = ProjectRootManager.getInstance(project);
-        projectManager.getContentRootsFromAllModules();
+        projectManager.getContentRootsFromAllModules(); //use this for all modules of a project
         Sdk projectSdk = projectManager.getProjectSdk();
         if(Objects.isNull(projectSdk)){
-         //TODO ispiši grešku
+            JOptionPane.showMessageDialog(null,
+                    "Something went wrong while running script: ",
+                    "Error", JOptionPane.INFORMATION_MESSAGE);
+            return;
         }
+        String sdkPath = projectSdk.getHomePath();
 
-        String classpath = projectRootPath + "gradle";
-        writeToClasspathFile(classpath);
+        String classpath = projectRootPath + "/gradle";
+        writeToAuxClasspathFile(classpath, sdkPath);
 
-        try {
-            List<String> cmds = new ArrayList<>();
-            cmds.add("python3");
-            cmds.add(scriptPath.toAbsolutePath().toString());
-            cmds.add("-t " + toolsArg.toString());
-            cmds.add("-c " + auxClasspathFromFile.toString());
-            cmds.add("-p " + packageName);
-            cmds.add(projectRootPath);
+        List<String> cmds = new ArrayList<>();
+        cmds.add("python3");
+        cmds.add(scriptPath.toAbsolutePath().toString());
+        cmds.add("-t");
+        cmds.add(toolsArg.toString());
+        cmds.add("-c");
+        cmds.add(auxClasspathFromFile.toAbsolutePath().toString());
+        cmds.add("-p");
+        cmds.add(packageName);
+        cmds.add(projectRootPath.toAbsolutePath().toString());
 
-            GeneralCommandLine generalCommandLine = new GeneralCommandLine(cmds);
-            generalCommandLine.setCharset(StandardCharsets.UTF_8);
-            generalCommandLine.setWorkDirectory(scriptFolder.getPath());
+        ProgressManager.getInstance().run(new Task.Backgroundable(project, "Analysis") {
+            @Override
+            public void run(@NotNull ProgressIndicator progressIndicator) {
+                progressIndicator.setText("Processing...");
+                try {
+                    GeneralCommandLine generalCommandLine = new GeneralCommandLine(cmds);
+                    generalCommandLine.setCharset(StandardCharsets.UTF_8);
+                    generalCommandLine.setWorkDirectory(scriptFolder.getPath());
+                    OSProcessHandler processHandler = new OSProcessHandler(generalCommandLine);
+                    processHandler.startNotify();
+                    processHandler.waitFor(1000*60*10);
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                }
+                progressIndicator.setText("Done");
+            }
+        });
 
-            OSProcessHandler processHandler = new OSProcessHandler(generalCommandLine);
-            processHandler.startNotify();
+//            processHandler.wait(1000 * 60 * 5);
+//            processHandler.waitFor(1000 * 60 * 5);
 //            String commandLineOutputStr = ScriptRunnerUtil.getProcessOutput(generalCommandLine);
 //            packageChooser.setText(commandLineOutputStr);
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
     }
 
-    private void writeToClasspathFile(String classpath) throws IOException {
+    private void writeToAuxClasspathFile(String classpath, String sdkPath) throws IOException {
         BufferedWriter bw = Files.newBufferedWriter(auxClasspathFromFile);
-        bw.write(classpath);
+        bw.write(classpath + "\n" + sdkPath + "\n");
         bw.flush();
         bw.close();
     }
