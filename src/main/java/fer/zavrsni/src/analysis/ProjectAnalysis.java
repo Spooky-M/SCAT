@@ -11,7 +11,6 @@ import com.intellij.openapi.projectRoots.Sdk;
 import com.intellij.openapi.roots.ProjectRootManager;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
-import org.jetbrains.android.dom.manifest.Application;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
@@ -101,6 +100,7 @@ public class ProjectAnalysis {
             return;
         }
         String sdkPath = projectSdk.getHomePath();
+        //pogledati sto treba ukljuciti u auxclasspath da radi spotbugs
 
         String classpath = projectRootPath + "/gradle";
         writeToAuxClasspathFile(classpath, sdkPath);
