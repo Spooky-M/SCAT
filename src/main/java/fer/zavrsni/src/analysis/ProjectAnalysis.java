@@ -26,38 +26,34 @@ import java.util.Objects;
 
 public class ProjectAnalysis {
 
-    private Project project;
-    private List<String> tools;
-    private String packageName;
-    private JTextField packageChooser;
+    private final Project project;
+    private final List<String> tools;
+    private final String packageName;
 
     private Path projectRootPath;
     private Path auxClasspathFromFile;
-    private Path reportPath;
-    private Path reportSrcPath;
 
     private VirtualFile scriptFolder;
     private Path scriptPath;
 
 
-    public ProjectAnalysis(@NotNull Project project, List<String> tools, String packageName,
-                           JTextField packageChooser) throws IOException {
+    public ProjectAnalysis(@NotNull Project project, List<String> tools, String packageName) throws IOException {
         this.project = project;
         this.tools = tools;
         this.packageName = packageName;
-        this.packageChooser = packageChooser;
 
         String path = project.getBasePath();
         if(Objects.isNull(path)) {
             JOptionPane.showMessageDialog(null,
-                    "Something went wrong while running script: ",
+                    "Something went wrong while running script: " + "object base path is null",
                     "Error", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
         this.projectRootPath = Paths.get(path);
         if(!Files.exists(projectRootPath)) {
             JOptionPane.showMessageDialog(null,
-                    "Something went wrong while running script: ",
+                    "Something went wrong while running script: " +
+                            "path " + projectRootPath.toAbsolutePath().toString() + " doesn't exist",
                     "Error", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
@@ -66,14 +62,17 @@ public class ProjectAnalysis {
                 projectRootPath.toString() + "/PPProjekt/");
         if(Objects.isNull(scriptFolder) || !scriptFolder.exists()) {
             JOptionPane.showMessageDialog(null,
-                    "Something went wrong while running script: ",
+                    "Something went wrong while running script: " + "PPProjekt folder couldn't be found. " +
+                            "PPProjekt folder should be located in project's root folder. " +
+                            "For example ./my_android_studio_project/PPProjekt",
                     "Error", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
         this.scriptPath = Paths.get(scriptFolder.getPath() + "/script.py");
         if(!Files.exists(scriptPath)) {
             JOptionPane.showMessageDialog(null,
-                    "Something went wrong while running script: ",
+                    "Something went wrong while running script: " +
+                            "couldn't find the script from its path " + scriptPath.toAbsolutePath().toString(),
                     "Error", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
@@ -82,7 +81,6 @@ public class ProjectAnalysis {
         if (!Files.exists(auxClasspathFromFile)) {
             Files.createFile(auxClasspathFromFile);
         }
-
     }
 
     public void executeAnalysis() throws IOException {
@@ -95,12 +93,17 @@ public class ProjectAnalysis {
         Sdk projectSdk = projectManager.getProjectSdk();
         if(Objects.isNull(projectSdk)){
             JOptionPane.showMessageDialog(null,
-                    "Something went wrong while running script: ",
+                    "Something went wrong while running script: " + "couldn't get project's SDK",
                     "Error", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
         String sdkPath = projectSdk.getHomePath();
-        //pogledati sto treba ukljuciti u auxclasspath da radi spotbugs
+        if(Objects.isNull(sdkPath) || !Files.exists(Paths.get(sdkPath))){
+            JOptionPane.showMessageDialog(null,
+                    "Something went wrong while running script: " + "sdk path couldn't be obtained or found",
+                    "Error", JOptionPane.INFORMATION_MESSAGE);
+            return;
+        }
 
         String classpath = projectRootPath + "/gradle";
         writeToAuxClasspathFile(classpath, sdkPath);
@@ -127,17 +130,19 @@ public class ProjectAnalysis {
                     OSProcessHandler processHandler = new OSProcessHandler(generalCommandLine);
                     processHandler.startNotify();
                     processHandler.waitFor(1000*60*10);
+
+                    JOptionPane.showMessageDialog(null,
+                            "The report is available in PPProjekt folder. ("
+                                    + projectRootPath.toAbsolutePath().toString() + "/PPProjekt/report.html)",
+                            "Done", JOptionPane.INFORMATION_MESSAGE);
                 } catch (ExecutionException e) {
                     e.printStackTrace();
+                    JOptionPane.showMessageDialog(null,
+                            "Something went wrong while running script: " + e.getMessage(),
+                            "Error", JOptionPane.INFORMATION_MESSAGE);
                 }
-                progressIndicator.setText("Done");
             }
         });
-
-//            processHandler.wait(1000 * 60 * 5);
-//            processHandler.waitFor(1000 * 60 * 5);
-//            String commandLineOutputStr = ScriptRunnerUtil.getProcessOutput(generalCommandLine);
-//            packageChooser.setText(commandLineOutputStr);
     }
 
     private void writeToAuxClasspathFile(String classpath, String sdkPath) throws IOException {

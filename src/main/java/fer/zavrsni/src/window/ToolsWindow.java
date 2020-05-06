@@ -1,16 +1,12 @@
 package fer.zavrsni.src.window;
 
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.project.ProjectManager;
 import com.intellij.openapi.wm.ToolWindow;
 import fer.zavrsni.src.analysis.ProjectAnalysis;
 import org.jetbrains.annotations.NotNull;
-import java.nio.file.Path;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.IOException;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,14 +14,14 @@ import java.util.Map;
 
 
 public class ToolsWindow {
+
     private JPanel toolsWindowContent;
     private JLabel header;
     private JTextField packageChooser;
-    private JTextField scriptField;
     private JButton analyseButton;
     private List<JCheckBox> boxes;
 
-    private Map<String, Integer> tools = new HashMap<>();
+    private final Map<String, Integer> tools = new HashMap<>();
 
     private static final int GRID_ROWS = 20;
     private static final int GRID_COLUMNS = 1;
@@ -62,9 +58,9 @@ public class ToolsWindow {
             toolsWindowContent.add(toolCheckBox);
         }
 
-        packageChooser = new JTextField("jakhar.aseem.diva");
-//        packageChooser = new JTextField("Enter package which you want to analyse (eg. \"com.intellij.openapi\")");
+        packageChooser = new JTextField("Enter package name");
         toolsWindowContent.add(packageChooser);
+
 
         analyseButton = new JButton("Analyse");
         analyseButton.addActionListener(e -> {
@@ -78,8 +74,7 @@ public class ToolsWindow {
 
             ProjectAnalysis pa;
             try {
-                pa = new ProjectAnalysis(project, selectedBoxes, packageChooser.getText(),
-                        packageChooser);
+                pa = new ProjectAnalysis(project, selectedBoxes, packageChooser.getText());
                 pa.executeAnalysis();
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(null,

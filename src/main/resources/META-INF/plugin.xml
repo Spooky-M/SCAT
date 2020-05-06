@@ -19,13 +19,4 @@
         <toolWindow id="SCAT" secondary="false" anchor="right" factoryClass="fer.zavrsni.src.window.ToolsWindowFactory"/>
     </extensions>
 
-    <actions>
-        <action
-                id="fer.zavrsni.SCAT.toolsMenu"
-                class="fer.zavrsni.src.toolsMenu.ToolsAction"
-                text="SCAT Default Analysis"
-                description="Analyses project with default configurations.">
-            <add-to-group group-id="ToolsMenu" anchor="last"/>
-        </action>
-    </actions>
 </idea-plugin>
