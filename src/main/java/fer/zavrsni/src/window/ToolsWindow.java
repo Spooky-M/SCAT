@@ -12,6 +12,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import fer.zavrsni.src.util.Utils;
+
 
 public class ToolsWindow {
 
@@ -28,14 +30,9 @@ public class ToolsWindow {
     private static final int GRID_H_GAP = 30;
     private static final int GRID_V_GAP = 10;
 
-    private static final String[] TOOLS_NAMES = {"spotbugs_3.1.0_RC7", "spotbugs_3.1.12", "spotbugs_4.0.0_beta1",
-        "spotbugs_4.0.0_beta2", "spotbugs_4.0.0_beta3", "spotbugs_4.0.0_beta4", "pmd", "cpd", "graudit", "checkstyle"};
-    private static final String SHORT_README = "Select tools, enter which package you want to analyse, " +
-            "and click \"analyse\" button to start.";
-
     public ToolsWindow(@NotNull Project project, @NotNull ToolWindow toolWindow) {
         int i = 0;
-        for(String tool: TOOLS_NAMES) {
+        for(String tool: Utils.TOOLS_NAMES) {
             tools.put(tool.trim(), i++);
         }
         createComponents(project, toolWindow);
@@ -46,7 +43,7 @@ public class ToolsWindow {
         toolsWindowContent = new JPanel();
         toolsWindowContent.setSize(component.getWidth(), component.getHeight());
 
-        header = new JLabel("<HTML><strong>" + SHORT_README + "</strong></HTML>", JLabel.CENTER);
+        header = new JLabel("<HTML><strong>" + Utils.SHORT_README + "</strong></HTML>", JLabel.CENTER);
         header.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         toolsWindowContent.add(header);
 
