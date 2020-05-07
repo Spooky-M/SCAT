@@ -11,6 +11,7 @@ import com.intellij.openapi.projectRoots.Sdk;
 import com.intellij.openapi.roots.ProjectRootManager;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
+import fer.zavrsni.src.utils.Util;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
@@ -36,7 +37,7 @@ public class ProjectAnalysis {
     private VirtualFile scriptFolder;
     private Path scriptPath;
 
-
+    
     public ProjectAnalysis(@NotNull Project project, List<String> tools, String packageName) throws IOException {
         this.project = project;
         this.tools = tools;
@@ -59,12 +60,12 @@ public class ProjectAnalysis {
         }
 
         this.scriptFolder = LocalFileSystem.getInstance().findFileByPath(
-                projectRootPath.toString() + "/PPProjekt/");
+                projectRootPath.toString() + "/Script/");
         if(Objects.isNull(scriptFolder) || !scriptFolder.exists()) {
             JOptionPane.showMessageDialog(null,
-                    "Something went wrong while running script: " + "PPProjekt folder couldn't be found. " +
-                            "PPProjekt folder should be located in project's root folder. " +
-                            "For example ./my_android_studio_project/PPProjekt",
+                    "Something went wrong while running script: " + "Script folder couldn't be found. " +
+                            "Script folder should be located in project's root folder. " +
+                            "For example ./my_android_studio_project/Script",
                     "Error", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
@@ -129,11 +130,11 @@ public class ProjectAnalysis {
                     generalCommandLine.setWorkDirectory(scriptFolder.getPath());
                     OSProcessHandler processHandler = new OSProcessHandler(generalCommandLine);
                     processHandler.startNotify();
-                    processHandler.waitFor(1000*60*10);
+                    processHandler.waitFor(Util.TIMEOUT);
 
                     JOptionPane.showMessageDialog(null,
-                            "The report is available in PPProjekt folder. ("
-                                    + projectRootPath.toAbsolutePath().toString() + "/PPProjekt/report.html)",
+                            "The report is available in Script folder. ("
+                                    + projectRootPath.toAbsolutePath().toString() + "/Script/report.html)",
                             "Done", JOptionPane.INFORMATION_MESSAGE);
                 } catch (ExecutionException e) {
                     e.printStackTrace();
