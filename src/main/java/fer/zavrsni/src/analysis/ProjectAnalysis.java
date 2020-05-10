@@ -25,19 +25,55 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Analyses the current project by calling Script's script.py from command line with specified arguments.
+ */
 public class ProjectAnalysis {
 
+    /**
+     *  Currently active project in IDE which runs plugin
+     */
     private final Project project;
+
+    /**
+     * Tools which should be run in analysis, argument passed by constructor
+     */
     private final List<String> tools;
+
+    /**
+     * The name of package which should be analysed, argument passed by constructor
+     */
     private final String packageName;
 
+    /**
+     * Path to the root of currently active project
+     */
     private Path projectRootPath;
+
+    /**
+     * Path to auxClasspathFromFile text file, which has paths to all additional resources necessary for analysis.
+     * auxClasspathFromFile has to have a single valid path in each row.
+     */
     private Path auxClasspathFromFile;
 
+    /**
+     * VirtualFile object of Script project's folder
+     */
     private VirtualFile scriptFolder;
+
+    /**
+     * Path to script.py, located in Script project's root folder
+     */
     private Path scriptPath;
 
-    
+
+    /**
+     * Constructor which takes all necessary data. Sets {@code projectRootPath}
+     * @param project -
+     * @param tools
+     * @param packageName
+     * @throws IOException
+     */
     public ProjectAnalysis(@NotNull Project project, List<String> tools, String packageName) throws IOException {
         this.project = project;
         this.tools = tools;
@@ -90,7 +126,6 @@ public class ProjectAnalysis {
         toolsArg.replace(toolsArg.length()-1, toolsArg.length(), "");
 
         ProjectRootManager projectManager = ProjectRootManager.getInstance(project);
-        projectManager.getContentRootsFromAllModules(); //use this for all modules of a project
         Sdk projectSdk = projectManager.getProjectSdk();
         if(Objects.isNull(projectSdk)){
             JOptionPane.showMessageDialog(null,
@@ -101,7 +136,7 @@ public class ProjectAnalysis {
         String sdkPath = projectSdk.getHomePath();
         if(Objects.isNull(sdkPath) || !Files.exists(Paths.get(sdkPath))){
             JOptionPane.showMessageDialog(null,
-                    "Something went wrong while running script: " + "sdk path couldn't be obtained or found",
+                    "Something went wrong while running script: " + "SDK path couldn't be obtained or found",
                     "Error", JOptionPane.INFORMATION_MESSAGE);
             return;
         }

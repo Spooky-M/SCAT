@@ -29,6 +29,5 @@ runIde {
 
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+      This is the initial release of plugin SCAT"""
 }

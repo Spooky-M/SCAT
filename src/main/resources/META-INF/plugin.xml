@@ -1,12 +1,12 @@
 <idea-plugin>
     <id>fer.zavrsni.SCAT</id>
     <name>Static Code Analysis Tools</name>
-    <vendor email="antonio.spoljar@gmail.com">Kul</vendor>
+    <vendor email="antonio.spoljar@gmail.com">Antonio Špoljar</vendor>
 
     <description>Plugin for static source code analysis of your project.
         It detects security issues, bad code practices and similar malevolent code.</description>
 
-    <change-notes>This is the initial release of plugin SCAT</change-notes>
+    <!--    <change-notes>This is the initial release of plugin SCAT</change-notes>-->
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
