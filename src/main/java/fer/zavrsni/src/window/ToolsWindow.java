@@ -17,23 +17,62 @@ import java.util.Map;
 
 import fer.zavrsni.src.utils.Util;
 
-
+/**
+ * Mimics the {@link ToolWindow} component. Creates all Swing elements of a window, and provides a method getContent() which
+ * returns top JPanel component on which all other components are placed. This content should then be attached to
+ * {@link ToolWindow}'s content.
+ */
 public class ToolsWindow {
 
+    /**
+     * Top {@code JPanel} component. Every other component is added to this {@code JPanel}.
+     */
     private JPanel toolsWindowContent;
+
+    /**
+     * Header of the window. Containes short README text.
+     */
     private JLabel header;
+
+    /**
+     * A {@code JButton} which, when clicked, opens SCAT's Github page.
+     */
     private JButton readmeLink;
+
+    /**
+     * {@code JTextField} in which user enters package to analyse
+     */
     private JTextField packageChooser;
+
+    /**
+     * Start analysis {@code JButton}
+     */
     private JButton analyseButton;
+
+    /**
+     * List of {@code JCheckBox} elements, each is one available tool, as listed in {@link Util}.
+     */
     private List<JCheckBox> boxes;
 
     private final Map<String, Integer> tools = new HashMap<>();
 
+    /**
+     * Rows and columns for {@code GridLayout}.
+     */
     private static final int GRID_ROWS = 20;
     private static final int GRID_COLUMNS = 1;
-    private static final int GRID_H_GAP = 30;
-    private static final int GRID_V_GAP = 10;
 
+    /**
+     * Height and width gaps between {@code GridLayout} rows and columns.
+     */
+    private static final int GRID_H_GAP = 30;
+    private static final int GRID_W_GAP = 10;
+
+    /**
+     * Basic constructor for {@link ToolsWindow}, creates Swing components.
+     * @param project - currently active project in IDE which runs plugin
+     * @param toolWindow - the "parent" {@link ToolWindow} object
+     */
     public ToolsWindow(@NotNull Project project, @NotNull ToolWindow toolWindow) {
         int i = 0;
         for(String tool: Util.TOOLS_NAMES) {
@@ -42,6 +81,11 @@ public class ToolsWindow {
         createComponents(project, toolWindow);
     }
 
+    /**
+     * Creates Swing components for the window.
+     * @param project - currently active project in IDE which runs plugin
+     * @param toolWindow - the "parent" {@link ToolWindow} object
+     */
     private void createComponents(Project project, ToolWindow toolWindow) {
         JComponent component = toolWindow.getComponent();
         toolsWindowContent = new JPanel();
@@ -102,10 +146,14 @@ public class ToolsWindow {
         });
         toolsWindowContent.add(analyseButton);
 
-        toolsWindowContent.setLayout(new GridLayout(GRID_ROWS, GRID_COLUMNS, GRID_H_GAP, GRID_V_GAP));
+        toolsWindowContent.setLayout(new GridLayout(GRID_ROWS, GRID_COLUMNS, GRID_H_GAP, GRID_W_GAP));
         toolsWindowContent.setVisible(true);
     }
 
+    /**
+     * Getter for {@code JPanel} element
+     * @return top component, {@code JPanel}
+     */
     public JPanel getContent() {
         return toolsWindowContent;
     }

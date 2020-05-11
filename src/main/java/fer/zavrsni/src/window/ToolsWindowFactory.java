@@ -8,15 +8,12 @@ import com.intellij.ui.content.ContentFactory;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Implementation of a factory class for ToolWindow objects, as specified by {@code plugin.xml}
+ * Implementation of a factory class for {@link ToolWindow} objects, as specified by {@code plugin.xml}
  */
 public class ToolsWindowFactory implements ToolWindowFactory {
 
     /**
-     * Class which should add the desired content to toolWindow parameter.
-     * It is called by default after initialization.
-     * @param project - currently active project in IDE which runs plugin
-     * @param toolWindow - ToolWindow object which we are modifying
+     * {@inheritDoc}
      */
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
@@ -27,8 +24,7 @@ public class ToolsWindowFactory implements ToolWindowFactory {
     }
 
     /**
-     * Initialization method, called before {@code createToolWindowContent()}
-     * @param window - ToolWindow object which we are modifying
+     * {@inheritDoc}
      */
     @Override
     public void init(@NotNull ToolWindow window) {
@@ -36,9 +32,7 @@ public class ToolsWindowFactory implements ToolWindowFactory {
     }
 
     /**
-     * Specifies whether our ToolWindow should be available or completely hidden when the IDE is run.
-     * @param project - currently active project in IDE which runs plugin
-     * @return true if ToolWindow should be visible, false otherwise
+     * {@inheritDoc}
      */
     @Override
     public boolean shouldBeAvailable(@NotNull Project project) {

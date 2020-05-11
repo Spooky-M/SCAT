@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * Analyses the current project by calling Script's script.py from command line with specified arguments.
+ * Analyses currently active project by calling {@code Script's script.py} from command line with specified arguments.
  */
 public class ProjectAnalysis {
 
@@ -68,11 +68,11 @@ public class ProjectAnalysis {
 
 
     /**
-     * Constructor which takes all necessary data. Sets {@code projectRootPath}
-     * @param project -
-     * @param tools
-     * @param packageName
-     * @throws IOException
+     * Constructor of {@link ProjectAnalysis} which takes all necessary data. Sets {@code projectRootPath}
+     * @param project - currently active project in IDE which runs plugin
+     * @param tools - tools which should be run in analysis
+     * @param packageName - the name of package which should be analysed
+     * @throws IOException - if creation of file auxClasspathFile fails
      */
     public ProjectAnalysis(@NotNull Project project, List<String> tools, String packageName) throws IOException {
         this.project = project;
@@ -120,6 +120,11 @@ public class ProjectAnalysis {
         }
     }
 
+    /**
+     * Starts analysis process in the background using {@code Task.Backgroundable}. Creates a new
+     * {@code OSProcessHandler} which contains {@code GeneralCommandLine} object. Script's script.py
+     * @throws IOException - if {@code writeToAuxClasspathFile()} method throws an exception
+     */
     public void executeAnalysis() throws IOException {
         StringBuilder toolsArg = new StringBuilder();
         tools.forEach(t -> toolsArg.append(t).append(","));
@@ -141,8 +146,8 @@ public class ProjectAnalysis {
             return;
         }
 
-        String classpath = projectRootPath + "/gradle";
-        writeToAuxClasspathFile(classpath, sdkPath);
+        String gradlePath = projectRootPath + "/gradle";
+        writeToAuxClasspathFile(gradlePath, sdkPath);
 
         List<String> cmds = new ArrayList<>();
         cmds.add("python3");
@@ -181,9 +186,16 @@ public class ProjectAnalysis {
         });
     }
 
-    private void writeToAuxClasspathFile(String classpath, String sdkPath) throws IOException {
+    /**
+     * Writes 2 lines in file {@code auxClasspathFromFile}. The first line is provided by {@code gradlePath},
+     * and the second by {@code sdkPath}.
+     * @param gradlePath - String representation of path to project's gradle folder (projectRoot/gradle)
+     * @param sdkPath - String representation of path to project's SDK
+     * @throws IOException - if any BufferedWriter method throws an exception
+     */
+    private void writeToAuxClasspathFile(String gradlePath, String sdkPath) throws IOException {
         BufferedWriter bw = Files.newBufferedWriter(auxClasspathFromFile);
-        bw.write(classpath + "\n" + sdkPath + "\n");
+        bw.write(gradlePath + "\n" + sdkPath + "\n");
         bw.flush();
         bw.close();
     }
