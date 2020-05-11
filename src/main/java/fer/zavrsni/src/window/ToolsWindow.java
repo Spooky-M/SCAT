@@ -105,6 +105,7 @@ public class ToolsWindow {
                         "Something went wrong while accessing URI. " +
                                 "Please contact developers for further information and questions.",
                         "Error", JOptionPane.INFORMATION_MESSAGE);
+                return;
             }
         });
         toolsWindowContent.add(readmeLink);
@@ -140,6 +141,7 @@ public class ToolsWindow {
                         "Something went wrong while running script. " +
                                 "Please contact developers for further information and questions.",
                         "Error", JOptionPane.INFORMATION_MESSAGE);
+                return;
             }
 
             analyseButton.setEnabled(true);
